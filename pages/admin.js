@@ -1,33 +1,4 @@
-// pages/index.js
-import React from 'react';
-import SocialFollow from '../components/SocialFollow';
-import RateStar from '../components/RateStar';
-import Feedback from '../components/Feedback';
-
-const Home = () => {
-  return (
-    <div className="home-page" style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Welcome to Redeem Data to Cash Money</h1>
-      <p>Earn cash by redeeming your data easily!</p>
-
-      {/* Social Follow Section */}
-      <SocialFollow />
-
-      {/* Rate Us Section */}
-      <RateStar />
-
-      {/* Feedback Section */}
-      <Feedback />
-    </div>
-  );
-};
-
-export default Home;
-
-
-
-
-
+// pages/admin.js
 import React, { useState } from "react";
 
 export default function AdminDashboard() {
@@ -56,10 +27,8 @@ export default function AdminDashboard() {
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h1>Admin Dashboard</h1>
 
-      {/* Connections Section */}
       <div style={{ marginTop: "30px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
         <h2>Connect Payment Services</h2>
-
         <div style={{ marginBottom: "15px" }}>
           <label>Paystack Secret Key:</label><br />
           <input
@@ -89,17 +58,15 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      {/* Placeholder: User List Section */}
       <div style={{ marginTop: "30px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
         <h2>Users & Redeems</h2>
         <p>Here you will see all users, data redeem history, and commissions once the app is live.</p>
       </div>
 
-      {/* Placeholder: Commission Section */}
       <div style={{ marginTop: "20px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
         <h2>Commission & Payouts</h2>
         <p>All user payouts and your 40% commission will be tracked automatically here after Paystack is connected.</p>
       </div>
     </div>
   );
-        }
+    }
