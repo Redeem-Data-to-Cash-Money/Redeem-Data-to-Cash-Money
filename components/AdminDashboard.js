@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   const handleVendorID = () => {
     console.log(`Vendor ID set: ${vendorID}`);
   };
-
+  
   return (
     <div>
       <h1>Admin Dashboard</h1>
