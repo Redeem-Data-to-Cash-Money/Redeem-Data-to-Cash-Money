@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import PaystackIntegration from '../components/PaystackIntegration';
 import DataList from '../components/DataList';
+import PaystackIntegration from '../components/PaystackIntegration';
 import RedeemForm from '../components/RedeemForm';
 
 export default function AdminDashboard() {
-  const [paystackKey, setPaystackKey] = useState("");
-  const [otopayVendorID, setOtopayVendorID] = useState("");
+  const [paystackKey, setPaystackKey] = useState('');
+  const [otopayVendorID, setOtopayVendorID] = useState('');
 
   const handleConnectPaystack = () => {
     if (!paystackKey) {
@@ -24,42 +24,28 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Admin Dashboard</h1>
 
-      {/* Payment Connections */}
-      <div style={{ marginTop: "30px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
+      <div style={{ marginTop: '20px' }}>
         <h2>Connect Payment Services</h2>
-        <div style={{ marginBottom: "15px" }}>
-          <label>Paystack Secret Key:</label><br />
-          <input
-            type="text"
-            value={paystackKey}
-            onChange={(e) => setPaystackKey(e.target.value)}
-            placeholder="Enter Paystack Secret Key"
-            style={{ padding: "5px", width: "250px" }}
-          />
-          <button onClick={handleConnectPaystack} style={{ marginLeft: "10px", padding: "5px 10px" }}>
-            Connect Paystack
-          </button>
-        </div>
+        <input
+          type="text"
+          value={paystackKey}
+          onChange={(e) => setPaystackKey(e.target.value)}
+          placeholder="Paystack Key"
+        />
+        <button onClick={handleConnectPaystack}>Connect Paystack</button>
 
-        <div>
-          <label>Otopay Vendor ID:</label><br />
-          <input
-            type="text"
-            value={otopayVendorID}
-            onChange={(e) => setOtopayVendorID(e.target.value)}
-            placeholder="Enter Otopay Vendor ID"
-            style={{ padding: "5px", width: "250px" }}
-          />
-          <button onClick={handleConnectOtopay} style={{ marginLeft: "10px", padding: "5px 10px" }}>
-            Connect Otopay
-          </button>
-        </div>
+        <input
+          type="text"
+          value={otopayVendorID}
+          onChange={(e) => setOtopayVendorID(e.target.value)}
+          placeholder="Otopay Vendor ID"
+        />
+        <button onClick={handleConnectOtopay}>Connect Otopay</button>
       </div>
 
-      {/* Components */}
       <DataList />
       <RedeemForm />
       <PaystackIntegration />
