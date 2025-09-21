@@ -1,13 +1,20 @@
+// pages/index.js
 import React from 'react';
-import DataList from '../components/DataList';
-import RedeemForm from '../components/RedeemForm';
+import SocialFollow from '../components/SocialFollow';
+import RateStar from '../components/RateStar';
+import Feedback from '../components/Feedback';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Redeem Data to Cash</h1>
-      <DataList />
-      <RedeemForm />
+    <div className="home-page" style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h1>Welcome to Redeem Data to Cash Money</h1>
+      <p>Earn cash by redeeming your data easily!</p>
+
+      <SocialFollow />
+      <RateStar />
+      <Feedback />
     </div>
   );
-}
+};
+
+export default Home;
