@@ -1,0 +1,16 @@
+
+import React from 'react';
+import DataList from '../components/DataList';
+import RedeemForm from '../components/RedeemForm';
+
+const Profile = () => {
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h1>User Profile</h1>
+      <DataList />
+      <RedeemForm />
+    </div>
+  );
+};
+
+export default Profile;
