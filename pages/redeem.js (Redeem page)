@@ -1,0 +1,13 @@
+import React from 'react';
+import RedeemForm from '../components/RedeemForm';
+
+const Redeem = () => {
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h1>Redeem Data</h1>
+      <RedeemForm />
+    </div>
+  );
+};
+
+export default Redeem;
