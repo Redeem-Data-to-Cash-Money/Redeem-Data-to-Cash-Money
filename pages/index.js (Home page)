@@ -1,8 +1,7 @@
-// pages/index.js
 import React from 'react';
 import SocialFollow from '../components/SocialFollow';
-import RateStar from '../components/RateStar';
-import Feedback from '../components/Feedback';
+import RateUs from '../components/RateUs';
+import FeedbackForm from '../components/FeedbackForm';
 
 const Home = () => {
   return (
@@ -10,9 +9,14 @@ const Home = () => {
       <h1>Welcome to Redeem Data to Cash Money</h1>
       <p>Earn cash by redeeming your data easily!</p>
 
+      {/* Social Follow Section */}
       <SocialFollow />
-      <RateStar />
-      <Feedback />
+
+      {/* Rate Us Section */}
+      <RateUs />
+
+      {/* Feedback Section */}
+      <FeedbackForm />
     </div>
   );
 };
