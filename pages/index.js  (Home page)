@@ -9,13 +9,8 @@ const Home = () => {
       <h1>Welcome to Redeem Data to Cash Money</h1>
       <p>Earn cash by redeeming your data easily!</p>
 
-      {/* Social Follow Section */}
       <SocialFollow />
-
-      {/* Rate Us Section */}
       <RateUs />
-
-      {/* Feedback Section */}
       <FeedbackForm />
     </div>
   );
