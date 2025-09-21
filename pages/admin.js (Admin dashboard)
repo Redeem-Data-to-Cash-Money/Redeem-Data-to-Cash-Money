@@ -1,5 +1,7 @@
-// pages/admin.js
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import PaystackIntegration from '../components/PaystackIntegration';
+import DataList from '../components/DataList';
+import RedeemForm from '../components/RedeemForm';
 
 export default function AdminDashboard() {
   const [paystackKey, setPaystackKey] = useState("");
@@ -10,7 +12,6 @@ export default function AdminDashboard() {
       alert("Please enter Paystack Secret Key");
       return;
     }
-    console.log("Paystack connected with key:", paystackKey);
     alert("Paystack connected successfully!");
   };
 
@@ -19,7 +20,6 @@ export default function AdminDashboard() {
       alert("Please enter Otopay Vendor ID");
       return;
     }
-    console.log("Otopay connected with vendor ID:", otopayVendorID);
     alert("Otopay connected successfully!");
   };
 
@@ -27,6 +27,7 @@ export default function AdminDashboard() {
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h1>Admin Dashboard</h1>
 
+      {/* Payment Connections */}
       <div style={{ marginTop: "30px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
         <h2>Connect Payment Services</h2>
         <div style={{ marginBottom: "15px" }}>
@@ -58,15 +59,10 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      <div style={{ marginTop: "30px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
-        <h2>Users & Redeems</h2>
-        <p>Here you will see all users, data redeem history, and commissions once the app is live.</p>
-      </div>
-
-      <div style={{ marginTop: "20px", padding: "15px", border: "1px solid #ccc", borderRadius: "8px" }}>
-        <h2>Commission & Payouts</h2>
-        <p>All user payouts and your 40% commission will be tracked automatically here after Paystack is connected.</p>
-      </div>
+      {/* Components */}
+      <DataList />
+      <RedeemForm />
+      <PaystackIntegration />
     </div>
   );
-    }
+}
